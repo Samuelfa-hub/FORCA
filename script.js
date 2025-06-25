@@ -42,6 +42,7 @@ const Vidas = document.getElementById("lives-count")
 const WrongLetters = document.getElementById("wrong-letters");
 const LifesCounter = document.getElementById("lives-count");
 const DisplayLifes = document.getElementById("Hearts");
+const Partes = document.getElementById("Parte1");
 const VidasImg = [
 "./Assets/1Hearts.png",
 "./Assets/2Hearts.png",
@@ -80,7 +81,8 @@ function VidasDecreaser () {
   vidas = Number(vidas); 
   vidas = vidas - 1;// backend 
   LifesCounter.innerHTML = LifesCounter.innerHTML -1 //frontend
-  DisplayLifes.src = VidasImg[vidas-1];
+  DisplayLifes.src = VidasImg[vidas-1];//trocando as sprites de vida 
+
   if(vidas === 0) {alert("Você perdeu!")} // criar uma função de game over
   console.log(vidas); //flag
 }
@@ -96,15 +98,6 @@ function Play () {
     }
 
 };
-
-
-
-
-
-
-
-
-//*Checar se ainda tem vidas o suficiente pra jogar se não game over (if vidas == 0 ){game over code};
 
 //*Mudar o Sprite do Bonequinho conforme a quantidade de vidas  
 //*Checar se a palavra escondida contem a letra sorteada 

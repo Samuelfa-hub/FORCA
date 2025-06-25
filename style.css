@@ -46,7 +46,7 @@ body {
 
 .hangman-part {
     /* Esconde as partes do boneco por padrão */
-    visibility: hidden; 
+    visibility:hidden; 
 }
 
 /* Display da Palavra Secreta */
