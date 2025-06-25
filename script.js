@@ -1,15 +1,4 @@
-//Pegando cada id do html 
-const SumbmitBtn = document.getElementById("MySubmit"); 
-const Input = document.getElementById("meuInput"); 
-const WordDisplay = document.getElementById("word-display");
-const Vidas = document.getElementById("lives-count")
-const WrongLetters = document.getElementById("wrong-letters");
-//Criando as letras permitidas 
-const Letters = [
-  "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M",
-  "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"
-];
-//Adicionando Elementos para serem sorteados 
+//Está parte inicial gera a palavra aleatoria assim que a janela é aberta (Incrementar um botão para gerar uma nova palvra sem ter q dar reload ou ganhar/perder).
 const starWarsElementos = [
   "Luke Skywalker",
   "Darth Vader",
@@ -42,6 +31,22 @@ const starWarsElementos = [
   "Tatooine",
   "Coruscant"
 ];
+let PalavraEscolhida = starWarsElementos[Math.floor(Math.random() * 30)] 
+let CrudeWord = PalavraEscolhida.replaceAll(" ","").replaceAll("-","").toUpperCase()// simplificando a palavra para lançala para o computador ler de forma crua.
+
+//Pegando cada id do html 
+const SumbmitBtn = document.getElementById("MySubmit"); 
+const Input = document.getElementById("meuInput"); 
+const WordDisplay = document.getElementById("word-display");
+const Vidas = document.getElementById("lives-count")
+const WrongLetters = document.getElementById("wrong-letters");
+//Criando as letras permitidas 
+const Letters = [
+  "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M",
+  "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"
+];
+//Adicionando Elementos para serem sorteados 
+
 //*Fazer um filtro de caracteres que so vai permitir que letras de A a Z passem
 function LetrasPermitidas() { //*Fazer um filtro de caracteres que so vai permitir que letras de A a Z passem
     //*transformar letras Minusculas em Maiusculas 
@@ -67,13 +72,10 @@ function VidasDecreaser () {
 
 function EscolherPalavra() { //Sorteando a palavra do jogo 
 
-    let PalavraEscolhida = starWarsElementos[Math.floor(Math.random() * 30)] 
-    console.log(PalavraEscolhida);//Flag
-    var CrudeWord = PalavraEscolhida.replaceAll(" ","").replaceAll("-","").toUpperCase()// simplificando a palavra para lançala para o computador ler de forma crua.
-    console.log(CrudeWord);//Flag
+    
 }
 //var para a palavra escolhida: 
-let PalavraEscolhida = "";// ficar sempre antes da função Escolher palavras acontecer 
+;// ficar sempre antes da função Escolher palavras acontecer 
 function Play () { 
 
 
