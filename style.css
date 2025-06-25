@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css2?family=Muli:wght@400;700&display=swap');
+/*Imput area*/ 
+#meuInput {
+    border-radius: 4px;
+}
+#MySubmit {
+    border-radius:5px;
+    border: none;
+
+}
+/* Estilos Gerais */
+body {
+    background-color: #34495e;
+    color: #fff;
+    font-family: 'Muli', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 0;
+    text-align: center;
+}
+
+/* Container Principal do Jogo */
+.game-container {
+    padding: 20px 30px;
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    justify-content: center;
+}
+
+/* Estilos da Forca e SVG */
+.hangman-svg {
+    fill: none;
+    stroke: #fff;
+    stroke-width: 4px;
+    stroke-linecap: round;
+}
+
+.hangman-part {
+    /* Esconde as partes do boneco por padrão */
+    visibility: hidden; 
+}
+
+/* Display da Palavra Secreta */
+.word-display {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 30px;
+    min-height: 50px;
+}
+
+.letter-slot {
+    border-bottom: 3px solid #2980b9;
+    width: 30px;
+    height: 40px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 28px;
+    text-transform: uppercase;
+}
+
+/* Informações do Jogo */
+.game-info {
+    margin-bottom: 20px;
+    color: #bdc3c7;
+}
+
+.game-info span {
+    color: #fff;
+    font-weight: bold;
+}
+
+/* Teclado Virtual */
+.keyboard {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(45px, 1fr));
+    gap: 8px;
+    max-width: 500px;
+}
+
+.key {
+    background-color: #fff;
+    color: #34495e;
+    border: none;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.key:hover:not(:disabled) {
+    background-color: #3498db;
+    color: #fff;
+}
+
+.key:disabled {
+    background-color: #95a5a6;
+    color: #7f8c8d;
+    cursor: not-allowed;
+}
+
+/* Popup de Fim de Jogo */
+.popup-container {
+    background-color: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: none; /* Alterado por JS para 'flex' */
+    align-items: center;
+    justify-content: center;
+}
+
+.popup {
+    background: #2c3e50;
+    border-radius: 10px;
+    padding: 30px 40px;
+    text-align: center;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+}
+
+.popup button {
+    margin-top: 20px;
+    padding: 12px 25px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/* Media Query para telas menores */
+@media (max-width: 768px) {
+    .game-container {
+        flex-direction: column;
+        align-items: center;
+    }
+}

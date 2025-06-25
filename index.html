@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo da Forca</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h1>Jogo da Forca</h1>
+    <p>Adivinhe a palavra secreta letra por letra!</p>
+
+    <div class="game-container">
+        <div class="hangman-box">
+            <svg height="250" width="200" class="hangman-svg">
+                <line x1="60" y1="20" x2="140" y2="20" />
+                <line x1="140" y1="20" x2="140" y2="50" />
+                <line x1="60" y1="20" x2="60" y2="230" />
+                <line x1="20" y1="230" x2="100" y2="230" />
+
+                <circle cx="140" cy="70" r="20" class="hangman-part" />
+                <line x1="140" y1="90" x2="140" y2="150" class="hangman-part" />
+                <line x1="140" y1="120" x2="110" y2="100" class="hangman-part" />
+                <line x1="140" y1="120" x2="170" y2="100" class="hangman-part" />
+                <line x1="140" y1="150" x2="110" y2="180" class="hangman-part" />
+                <line x1="140" y1="150" x2="170" y2="180" class="hangman-part" />
+            </svg>
+        </div>
+
+        <div class="game-box">
+            <div id="word-display" class="word-display">
+                
+            </div>
+
+                <form action="/seu-endpoint-de-envio" method="POST">
+  <label for="meuInput">Digite sua Letra:</label><br>
+  <input type="text" id="meuInput" name="dadosDoInput" placeholder="EX:A,B,C,D,E,F,G,H" required>
+  <button type="submit" id="MySubmit">Enviar</button>
+</form>
+            <div class="game-info">
+                <p>Letras erradas: <span id="wrong-letters"></span></p>
+                <p>Vidas restantes: <span id="lives-count">6</span></p>
+            </div>
+            
+            <div id="keyboard" class="keyboard">
+                </div>
+        </div>
+    </div>
+
+    <div id="popup-container" class="popup-container">
+        <div class="popup">
+            <h2 id="popup-message"></h2>
+            <button id="play-again-button">Jogar Novamente</button>
+        </div>
+    </div>
+
+    </body>
+</html>
