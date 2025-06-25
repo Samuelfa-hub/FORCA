@@ -31,26 +31,36 @@ const starWarsElementos = [
   "Tatooine",
   "Coruscant"
 ];
-let PalavraEscolhida = starWarsElementos[Math.floor(Math.random() * 30)] 
+let PalavraEscolhida = starWarsElementos[Math.floor(Math.random() * starWarsElementos.length)] 
 let CrudeWord = PalavraEscolhida.replaceAll(" ","").replaceAll("-","").toUpperCase()// simplificando a palavra para lançala para o computador ler de forma crua.
-
+console.log(CrudeWord)
 //Pegando cada id do html 
 const SumbmitBtn = document.getElementById("MySubmit"); 
 const Input = document.getElementById("meuInput"); 
 const WordDisplay = document.getElementById("word-display");
 const Vidas = document.getElementById("lives-count")
 const WrongLetters = document.getElementById("wrong-letters");
+const LifesCounter = document.getElementById("lives-count");
+const DisplayLifes = document.getElementById("Hearts");
+const VidasImg = [
+"./Assets/1Hearts.png",
+"./Assets/2Hearts.png",
+"./Assets/3Hearts.png",
+"./Assets/4Hearts.png",
+"./Assets/5Hearts.png",
+"./Assets/6Hearts.png"
+]
+//var vidas: 
+let vidas = 6;
 //Criando as letras permitidas 
 const Letters = [
   "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M",
   "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"
 ];
-//Adicionando Elementos para serem sorteados 
-
 //*Fazer um filtro de caracteres que so vai permitir que letras de A a Z passem
 function LetrasPermitidas() { //*Fazer um filtro de caracteres que so vai permitir que letras de A a Z passem
     //*transformar letras Minusculas em Maiusculas 
-    let ChosedLetter = Input.value; 
+    let ChosedLetter = Input.value.trim(); 
     ChosedLetter = ChosedLetter.toUpperCase();
     console.log(ChosedLetter);
     //Fazendo a verificação se a letra é permitida, ou seja se ela bate com o array de letras. 
@@ -60,39 +70,30 @@ function LetrasPermitidas() { //*Fazer um filtro de caracteres que so vai permit
     }
     else { //Não é uma letra permitida
         console.log("Foi mal irmão coloca uma letra ai!")
+        return null; 
     }
 
 }
- //*Diminuir o número de vidas toda vez que o Player errar
+//Secção vida: 
 function VidasDecreaser () {
-
-
-    if(Vidas.value === 0) {GameOver} // criar uma fução de game over 
+ //*Diminuir o número de vidas toda vez que o Player errar
+  vidas = Number(vidas); 
+  vidas = vidas - 1;// backend 
+  LifesCounter.innerHTML = LifesCounter.innerHTML -1 //frontend
+  DisplayLifes.src = VidasImg[vidas-1];
+  if(vidas === 0) {alert("Você perdeu!")} // criar uma função de game over
+  console.log(vidas); //flag
 }
-
-function EscolherPalavra() { //Sorteando a palavra do jogo 
-
-    
-}
-//var para a palavra escolhida: 
-;// ficar sempre antes da função Escolher palavras acontecer 
+// ficar sempre antes da função Escolher palavras acontecer 
 function Play () { 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  let ChosedLetter = LetrasPermitidas(); 
+ 
+    if(CrudeWord.includes(ChosedLetter))//jogador acerta a letra e troca na forca se aproximando da vitoria. 
+    {console.log("contem a letra")}
+    else{
+    console.log("não contem a letra")
+      VidasDecreaser();
+    }
 
 };
 
