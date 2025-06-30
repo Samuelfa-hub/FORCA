@@ -19,12 +19,12 @@
                 <line x1="60" y1="20" x2="60" y2="230"      />
                 <line x1="20" y1="230" x2="100" y2="230"    />
 
-                <circle cx="140" cy="70" r="20" class="hangman-part"           id="Parte1" />
-                <line x1="140" y1="90" x2="140" y2="150" class="hangman-part"  id="Parte2"/>
-                <line x1="140" y1="120" x2="110" y2="100" class="hangman-part" id="Parte3"/>
-                <line x1="140" y1="120" x2="170" y2="100" class="hangman-part" id="Parte4"/>
-                <line x1="140" y1="150" x2="110" y2="180" class="hangman-part" id="Parte5"/>
-                <line x1="140" y1="150" x2="170" y2="180" class="hangman-part" id="Parte6"/>
+                <circle cx="140" cy="70" r="20" class="hangman-part"           id="Cabeca" />
+                <line x1="140" y1="90" x2="140" y2="150" class="hangman-part"  id="Tronco"/>
+                <line x1="140" y1="120" x2="110" y2="100" class="hangman-part" id="Braco1"/>
+                <line x1="140" y1="120" x2="170" y2="100" class="hangman-part" id="Braco2"/>
+                <line x1="140" y1="150" x2="110" y2="180" class="hangman-part" id="Perna1"/>
+                <line x1="140" y1="150" x2="170" y2="180" class="hangman-part" id="Perna2"/>
             </svg>
         </div>
         <div class="game-box">
@@ -37,7 +37,7 @@
   <button type="submit" id="MySubmit">Enviar</button>
 </form>
             <div class="game-info">
-                <p>Letras erradas: <span id="wrong-letters"></span></p>
+                <p>Letras erradas: <br><span id="wrong-letters"></span><br></p>
                 <p>Vidas restantes: <span id="lives-count">6</span></p>
                 <img src="./Assets/6Hearts.png" alt="Hearts" id="Hearts">
             </div>
