@@ -130,7 +130,7 @@ const IDspartes = [
   //preparando a palavra para mostrala
   var ArrayPe = PalavraEscolhida.split("");//para o player
   var ArrayCW = PalavraCrua.split("");//para o sistema
-  for(i = 0;i < PalavraEscolhida.length; i++) {
+  for(i = 0;i < PalavraCrua.length; i++) {
     UserDisplay.push("_");
   }
   WordDisplay.innerHTML = UserDisplay;
