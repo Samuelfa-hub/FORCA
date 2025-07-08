@@ -16,7 +16,7 @@ ContagemVitoria = 0;
 for (let i = 0;i < IDspartes.length;i++){ 
   IDspartes[i].style.visibility = "hidden";
   console.log("1"+i);  
-}
+};
 
 }
 function Vitoria () { 
