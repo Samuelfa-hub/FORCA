@@ -12,13 +12,14 @@ PopUpMessage.innerHTML = "";
 LetrasEscolhidas = [];
 LetrasErradas.innerHTML = "";
 LetrasJaEscolhidas.innerHTML = LetrasEscolhidas;
-
+for (let i = 0;IDspartes.length )
+ContagemVitoria = 0; 
 }
 function Vitoria () { 
   if (ContagemVitoria === ArrayCWGlobal.length) 
   { 
     PopUp.style.display = "flex";
-    PopUpMessage.innerHTML = "Parábens Você venceu🔥🔥🔥"
+    PopUpMessage.innerHTML = "Parábens Você venceu🔥🔥🔥";
   }
 }
 function DisplayWord (PalavraEscolhida,PalavraCrua){
