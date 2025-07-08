@@ -12,6 +12,10 @@
 #Hearts { 
     scale:1.5;
 }
+#Gerar { 
+    border-radius:5px;
+    border: none; 
+}
 /* Estilos Gerais */
 body {
     background-color: #34495e;
