@@ -13,6 +13,11 @@ LetrasEscolhidas = [];
 LetrasErradas.innerHTML = "";
 LetrasJaEscolhidas.innerHTML = LetrasEscolhidas;
 ContagemVitoria = 0; 
+for (let i = 0;i < IDspartes.length;i++){ 
+  IDspartes[i].style.visibility = "hidden";
+  console.log("1"+i);  
+}
+
 }
 function Vitoria () { 
   if (ContagemVitoria === ArrayCWGlobal.length) 
@@ -27,7 +32,7 @@ function DisplayWord (PalavraEscolhida,PalavraCrua){
   for(i = 0;i < PalavraEscolhida.length; i++) {
     UserDisplay.push("_");
   }
-  WordDisplay.innerHTML = UserDisplay;
+  WordDisplay.innerHTML = UserDisplay.join(" ");
   ArrayPeGlobal = ArrayPe;
   ArrayCWGlobal = ArrayCW;
 }
@@ -144,8 +149,7 @@ function Trocar (LetraEscolhida,) //*Mudar do caracter secreto para a letra esco
     {
       UserDisplay[i] = LetraEscolhida;
       WordDisplay.innerHTML = UserDisplay; //Mostrando a palavra na tela 
-      ContagemVitoria = Number(ContagemVitoria+1); 
-
+      ContagemVitoria = Number(ContagemVitoria) + 1; 
       console.log(ContagemVitoria); 
     }
   }
@@ -198,3 +202,4 @@ GerarPalavra();
 SumbmitBtn.addEventListener("click",Play);
 Gerar.addEventListener("click",GerarPalavra);
 ReplayButton.addEventListener("click",ResetarAtributos);
+ReplayButton.addEventListener("click",GerarPalavra);
