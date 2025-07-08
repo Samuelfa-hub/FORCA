@@ -12,12 +12,11 @@ PopUpMessage.innerHTML = "";
 LetrasEscolhidas = [];
 LetrasErradas.innerHTML = "";
 LetrasJaEscolhidas.innerHTML = LetrasEscolhidas;
-ContagemVitoria = 0; 
 for (let i = 0;i < IDspartes.length;i++){ 
   IDspartes[i].style.visibility = "hidden";
   console.log("1"+i);  
-};
-
+}
+ContagemVitoria = 0;
 }
 function Vitoria () { 
   if (ContagemVitoria === ArrayCWGlobal.length) 
