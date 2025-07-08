@@ -194,7 +194,7 @@ const Letters = [//Array letras
   "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M",
   "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z","1","2","3","8","Ç"
 ];
-
+GerarPalavra();
 SumbmitBtn.addEventListener("click",Play);
 Gerar.addEventListener("click",GerarPalavra);
 ReplayButton.addEventListener("click",ResetarAtributos);
